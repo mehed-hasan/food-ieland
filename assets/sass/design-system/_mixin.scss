@@ -1,0 +1,65 @@
+
+
+// Color Mixin  
+@mixin color($color,$opacity) {
+    opacity: $opacity;
+    color: $color;
+}
+
+
+// Heading mixin
+
+@mixin heading ($size,$color,$line_height,$font_weight,$letter_spacing,$align) {
+font-family: $theme_font;
+font-style: $font_normal;
+font-weight: $font_weight;
+font-size: $size;
+line-height: $line_height;
+color: $color;
+letter-spacing: $letter_spacing;
+text-align:$align;
+}
+
+@mixin paragraph($size,$color,$line_height,$font_weight,$opacity,$align) {
+    font-family: $theme_font;
+    font-style: $font_normal;
+    font-weight: $font_weight;
+    font-size: $size;
+    line-height: $line_height;  
+    color: $color;
+    opacity: $opacity;
+    text-align: $align;
+
+}
+
+//@include background(100px,center center, no-repeat, cover, center);
+@mixin background($min_height, $bg_position, $bg_repeat, $bg_size ){
+    min-height:$min_height;
+    background-position: $bg_position;
+    background-repeat: $bg_repeat;
+    background-size: $bg_size;
+}
+
+@mixin  max_width($max_width) {
+    max-width:$max_width;
+    width:100%;
+}
+
+@mixin div_maker($bg_color,$min_height){
+    display: flex;
+    background-color: $bg_color;
+    min-height: $min_height;
+    align-items: center; 
+}
+
+@mixin  button ($padding,$color,$bg_color,$border_radius,$font_weight,$line_height) {
+    font-family: $theme_font;
+    padding: $padding;
+    border:1px solid transparent;
+    color:$color;
+    border-radius: $border_radius;
+    text-decoration: none;
+    background-color: $bg_color;
+    font-weight: $font_weight;
+    line-height: $line_height;
+}

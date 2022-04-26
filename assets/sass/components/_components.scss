@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px
+}
+
+
+.cat_card{
+    position: relative;
+    @include background(248px,center, no-repeat, cover);
+    @include max_width(200px);
+}
+
+.cat_card h4{ 
+    @include heading ($h4_desk_font_size,white,28px,$bold,initial,center);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 23px;
+    transform: translate(-50%, 0%);
+
+}
+
+
+
+
+// Code for food card component 
+.food_card{
+    background: #F7F7F7;
+    border-radius: 5px;
+    @include max_width(400px);
+    position: relative;
+    .heart{
+        position: absolute;
+        right: 15px;
+    }
+
+    svg{
+        margin-top: 10px
+    }
+
+    .food_img{
+        @include background(266px, center, no-repeat, cover );
+        @include max_width(403px);
+        border-radius: 5px;
+    }
+
+    .food_details{
+
+        @include max_width(352px);
+        margin: auto;
+        padding: 25px 0px;
+        
+
+        h3.title{
+            @include heading ($h3_desk_font_size,$heading_color,32px,$semi_bold,initial,left);
+            
+        }
+
+        .other_info{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 27px;
+            align-items: center;
+
+
+            .time_and_type{
+                display: flex;
+                @include max_width(205px);
+                justify-content: space-between;
+    
+                .uploaded_time, .food_type{
+                    display: flex;
+                }
+                .uploaded_time span:last-of-type, .food_type span:last-of-type{
+                    margin-top: 12px;
+                    margin-left: 14px;
+                }
+
+        
+            }
+
+            .food_price{
+                @include heading ($h3_desk_font_size,$secondary_color,32px,$semi_bold,$heading_letter_spacing,left); 
+            }
+    
+            
+        }
+    
+        
+
+        
+    }
+
+
+}
+
+
+.heart{
+    
+    svg{
+        padding: 10px;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        background: white;
+    path{
+        fill: $heart_color !important;
+    }
+    }
+
+ 
+}
+
+
+
+.adv_bg{
+    @include background(434px, center, no-repeat, cover );
+    @include max_width(403px);
+}
+
+
+.newsletter{
+    @include div_maker($primary_color,420px);
+
+
+    .news_els{
+        @include max_width(620px);
+
+
+        h2{
+            @include heading($h2_desk_font_size,white,32px,$bold,$heading_letter_spacing,left)
+        }
+        p{
+            @include paragraph($p_font_size,white,28px,$medium_bold,0.8,left);
+            margin: 33px 0px;
+        }
+    
+        a{
+            @include button(8px 24px,white,$green_color,9px,$bold,149.2%);
+        }
+
+    }
+    
+
+
+}

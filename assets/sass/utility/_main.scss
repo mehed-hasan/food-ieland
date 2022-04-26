@@ -1,0 +1,56 @@
+//  Navbar
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar{
+
+    .navbar{
+        background-color: rgba(37, 37, 37, 0.5) !important;
+        backdrop-filter: blur(4px);
+        min-height: 96px;
+    }
+
+    li a{
+        @include color(white,0.5);
+    }
+
+    li a.active{
+        opacity: 1;
+    }
+    .social{
+
+        margin-left: 129px;
+        align-items: center;
+
+        li{
+            padding-right: 40px;
+        }
+
+        & li:last-of-type{
+            padding-right: 0px;
+        }
+
+        li a{
+            @include color(white,1);
+        }
+
+    }
+
+    .links{
+        li{
+            padding-right: 62px;
+        }
+        & li:last-of-type{
+            padding-right: 0px;
+        }
+    }
+
+    
+
+    #navbarSupportedContent{
+        justify-content: flex-end;
+    }
+}       
