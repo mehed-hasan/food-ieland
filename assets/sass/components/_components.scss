@@ -6,19 +6,22 @@
 
 .cat_card{
     position: relative;
-    @include background(248px,center, no-repeat, cover);
+    @include background(248px,center, cover);
     @include max_width(200px);
+
+
+    h4{ 
+        @include heading ($h4_desk_font_size,white,28px,$bold,initial,center);
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        bottom: 23px;
+        transform: translate(-50%, 0%);
+    
+    }
 }
 
-.cat_card h4{ 
-    @include heading ($h4_desk_font_size,white,28px,$bold,initial,center);
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    bottom: 23px;
-    transform: translate(-50%, 0%);
 
-}
 
 
 
@@ -39,7 +42,7 @@
     }
 
     .food_img{
-        @include background(266px, center, no-repeat, cover );
+        @include background(266px, center, cover );
         @include max_width(403px);
         border-radius: 5px;
     }
@@ -95,6 +98,7 @@
 }
 
 
+
 .heart{
     
     svg{
@@ -114,7 +118,7 @@
 
 
 .adv_bg{
-    @include background(434px, center, no-repeat, cover );
+    @include background(434px, center, cover );
     @include max_width(403px);
 }
 
@@ -140,7 +144,4 @@
         }
 
     }
-    
-
-
 }

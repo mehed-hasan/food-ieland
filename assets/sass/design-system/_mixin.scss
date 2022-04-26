@@ -6,7 +6,7 @@
     color: $color;
 }
 
-
+ 
 // Heading mixin
 
 @mixin heading ($size,$color,$line_height,$font_weight,$letter_spacing,$align) {
@@ -33,10 +33,10 @@ text-align:$align;
 }
 
 //@include background(100px,center center, no-repeat, cover, center);
-@mixin background($min_height, $bg_position, $bg_repeat, $bg_size ){
+@mixin background($min_height, $bg_position, $bg_size ){
     min-height:$min_height;
     background-position: $bg_position;
-    background-repeat: $bg_repeat;
+    background-repeat: no-repeat;
     background-size: $bg_size;
 }
 
