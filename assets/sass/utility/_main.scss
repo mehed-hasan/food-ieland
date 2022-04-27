@@ -341,7 +341,10 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
 }
 
 
+
+
 #menu_items{
+
 
     .menu_heading{
         @include max_width(706px);
@@ -358,32 +361,286 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
         }
     }
 
-}
 
-.item{
 
-    display: flex;
-    padding-bottom: 24px;
-    margin-bottom: 32px;
+    
 
-    border-bottom: 1px solid #e8e8e8;
+    .all_items{
+        @include max_width(1060px);
+        margin: auto;
 
-    .about_item{
 
-        margin-left: 23px;
-
-        h5{
-            @include heading ($h5_desk_font_size,$primary_color,28px,$semi_bold,$heading_letter_spacing,left); 
+        .item{
+            @include max_width(480px);
+            margin: auto;
+            display: flex;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            justify-content: space-between;
+        
+            border-bottom: 1px solid #e8e8e8;
+        
+            .about_item{
+                
+                h5{
+                    @include heading ($h5_desk_font_size,$primary_color,28px,$semi_bold,$heading_letter_spacing,left); 
+                }
+                p{
+                    @include paragraph($p_font_size,$primary_color,28px,$regular_bold,0.7,left);
+                    font-style: italic;
+                    margin-top: 12px;
+                }
+        
+            }
+        
+            .item_price{
+                @include heading ($h5_desk_font_size,$secondary_color,28px,$semi_bold,$heading_letter_spacing,left); 
+            }
         }
-        p{
-            @include paragraph($p_font_size,$primary_color,28px,$regular_bold,0.7,left);
-            font-style: italic;
-            margin-top: 12px;
-        }
-
     }
 
-    .item_price{
-        @include heading ($h5_desk_font_size,$secondary_color,28px,$semi_bold,$heading_letter_spacing,left); 
+    .tab_btns{
+        display:flex;
+        justify-content: center;
+
+        .nav-item{
+            margin: 0px 41.2px;
+        }
+
+        .nav-pills .nav-link{
+            @include color (#151515,0.3);
+            background-color: transparent;
+            @include heading($h5_desk_font_size,$heading_color,28px,$semi_bold,initial,center);
+            text-transform: uppercase;
+            border-bottom: 1px solid transparent;
+            border-radius: 0px;
+            padding: 0px;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            @include color ($secondary_color,1);
+            background-color: transparent;
+            border-bottom: 1px solid $secondary_color;
+        }
+        
     }
 }
+
+
+#social_section{
+
+    h1{
+        @include heading($h1_desk_font_size,$heading_color,58px,$semi_bold,$heading_letter_spacing,center);
+    }
+
+    p{
+        @include paragraph($p_font_size,#151515,19px,$regular_bold,0.6,center);
+        margin-top: 24px;
+    }
+
+    .social_posts{
+        .post{
+            margin: 0px 20px;
+        }
+    }
+
+    .instagram_btn{
+        @include button (18px 54px,white,$primary_color,16px,$semi_bold,17px);
+        display: table;
+        margin: auto;
+    }
+    svg{
+        margin-left: 10px;
+    }
+}
+
+
+
+/* Footer has been started  */
+#footer{
+    background-color: $primary_color;
+
+
+    .logo_social{
+
+        li:nth-child(3){
+            margin-right: 0px;
+            }
+
+
+        a{
+            list-style: none;
+            margin-right: 27px;
+          }
+          img{
+            margin-bottom: 43px;
+            }
+            .social_btns{
+                margin-top: 43PX;
+              }
+              
+              .social_btns {
+                path {
+                    transition: 1s;
+                  }
+                  a {
+                    text-decoration: none;
+                  
+                  }
+                  svg {
+                    transition: .5s;
+                    border-radius: 50%;
+                  
+                  }
+
+                 & svg:hover  {
+                    background: white;
+                    
+                  }
+
+                  circle{
+                    transition: .5s;
+                  }
+
+                  & svg:hover path{
+                    fill:rgb(8, 91, 216);
+                  }
+                  
+        
+              }
+    }
+
+
+
+            h5.footer_heading{
+             @include heading($h5_desk_font_size,white,22px,$bold,initial,left);
+             margin-bottom: 24px;
+            }
+
+            .useful_links {
+
+                ul{
+                    padding-left: 0px;
+                  }
+                  li{
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-transform: capitalize;
+                        transition: .5s;
+                        }
+                  }
+            }
+
+
+
+            .copy_write_text{
+                font-style: normal;
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 15px;
+              /* identical to box height */
+              
+              text-align: center;
+              text-transform: lowercase;
+              
+              color: #FFFFFF;
+              padding-bottom: 38px;
+              
+              }
+
+              #mob_footer_part{
+
+                margin-top: 40px;
+
+                .accordion-button:not(.collapsed)::after {
+                    background-image:url('../images/icons/+.svg') !important;
+                    height: 16px;
+                    width: 16px;
+                    background-size: cover;
+                    transform: rotate(-45deg);
+                  }
+
+                  .accordion-button{
+  
+                    background-color:#111314;
+                    color: white;
+                    padding-left: 0px;
+                  }
+
+                  .accordion-button::after {
+                    flex-shrink: 0;
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    height: 16px;
+                    width: 16px;
+                    margin-left: auto;
+                    content:"";
+                    background-image:url('../images/icons/+.svg') !important;
+                    background-repeat: no-repeat;
+                    background-size: 1.25rem;
+                    transition: transform .2s ease-in-out;
+                    background-size: cover;
+                    transform: rotate(0deg);
+                  
+                  }
+
+                  button{
+                    font-size: 14px;
+                  }
+
+                  .accordion-body {
+                    background: #1E1E1E;
+                    padding: 24px 129px 24px 24px;
+    
+                     a {
+      
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #FFFFFF;
+                        
+                        }
+                        
+                    
+                    }
+
+                    .accordion-button{
+                        border-bottom: 1px solid #ECECF1;
+                        box-shadow: none;
+                        border-top-left-radius:0px;
+                        border-top-right-radius:0px
+                      }
+                    
+              }
+
+              .accordion-button:focus {
+                z-index: 3;
+                border-color: none;
+                outline: 0;
+                box-shadow: none;
+                background-color:#111314;
+                color: white;
+              
+              }
+
+              .accordion-item {
+                background-color: #fff;
+                border: none;
+                border-radius: 0px;
+              }
+
+              .contact{
+                margin-top: 40px;
+              }
+              
+              
+
+              
+
+  }
+
+
