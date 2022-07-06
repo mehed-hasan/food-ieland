@@ -67,6 +67,34 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     }
 }  
 
+.pagination {
+    display: flex;
+    justify-content: center;
+
+
+    .page-item:first-child .page-link, .page-item:not(:first-child) .page-link {
+        border-radius: 50%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11 px;
+        line-height: 140%;
+        color: $primary_color;
+        padding: 8px 16px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .page-item.active .page-link {
+        z-index: 3;
+        color: #fff;
+        background-color:$primary_color;
+        border-color: $primary_color;
+    }
+    
+    .page-link:focus {
+        box-shadow: none;
+    }
+}
 
 #hero{
     
@@ -359,13 +387,13 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     
     }
 
-    .food_card.ads .food_img{
-        min-height: 443px;
-    }
 
 
 }
 
+.food_card.ads .food_img{
+    min-height: 443px;
+}
 
 
 .newsletter{
@@ -1048,35 +1076,6 @@ svg{
           .search_results{
               @include max_width(840px);
               margin: auto;
-
-
-              .pagination {
-                display: flex;
-                justify-content: center;
-            }
-
-            .page-item:first-child .page-link, .page-item:not(:first-child) .page-link {
-                border-radius: 50%;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 11 px;
-                line-height: 140%;
-                color: $primary_color;
-                padding: 8px 16px;
-                margin-left: 5px;
-                margin-right: 5px;
-            }
-
-            .page-item.active .page-link {
-                z-index: 3;
-                color: #fff;
-                background-color:$primary_color;
-                border-color: $primary_color;
-            }
-
-            .page-link:focus {
-                box-shadow: none;
-            }
           }
 
 
@@ -1088,3 +1087,206 @@ svg{
         }
 
         
+
+        #blog_banner{
+            @include background(344px, center, cover );
+            align-items: center;
+            overflow: hidden;
+            display: flex;
+            text-align: center;
+            min-height: 442px;
+
+            .heading_desc{
+                @include max_width(620px);
+                margin: auto;
+
+                img{
+                    margin: 9px 0px;
+                }
+
+                h1{
+                    @include heading($h1_desk_font_size,#151515,58px,$semi_bold,$heading_letter_spacing,center);
+                    margin-top: 90px;
+                }
+                p{
+                    @include paragraph($p_font_size,#151515,140%,$regular_bold,1,center);
+
+                }
+            }
+    
+            
+    }
+
+    // Subdcribe Field 
+
+    .subscribe_field{
+        @include max_width(508px);
+        margin: auto;
+
+        form{
+            position: relative;
+        }
+        .input{
+            padding: 24px 15px;
+            background-color: #FFFFFF;
+            border: none;
+            border-radius: 10px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: -0.02em;
+            margin-top: 14px;
+            opacity: 0.4;
+            color: #151515;
+           
+        }
+
+       
+
+        .subscribe_btn{
+            @include  button (15px 30px,white,#151515,5px,$semi_bold,23.87px);
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            transition: .5s;
+        }
+        & .subscribe_btn:hover{
+           opacity: .6;
+        }
+    }
+
+
+#blog_list{
+    margin-top: 64px;
+
+    h3{
+        @include heading ($h3_desk_font_size,$heading_color,32px,$semi_bold,$heading_letter_spacing,left);
+        margin-bottom: 18.5px;
+    }
+    .about_item{
+        margin-left: 40px;
+    }
+    .item{
+
+        display: flex;
+        padding-bottom: 24px;
+        margin-bottom: 32px;
+        margin-bottom: 25px;
+    
+}
+
+.date{
+    color: rgba(0, 0, 0, 0.6);
+}
+.user_info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 19px;
+
+    p{
+        @include paragraph($p_font_size,$primary_color,140%,$bold,1,left);
+        margin-left: 16px;
+        margin-right: 44px;
+    }
+}
+.blog_short_desc{
+    @include max_width(510px);
+    margin-bottom: 20px;
+    @include paragraph($p_font_size,$primary_color,28px,$regular_bold,.5,left);
+
+}
+.see_more{
+    @include  button (5px 10px,$secondary_color,white,5px,$regular_bold,23.87px);
+    border: 1px solid $secondary_color;
+    text-transform: capitalize;
+    transition: .5s;
+}
+
+& .see_more:hover{
+    background-color: $secondary_color;
+    border: 1px solid $secondary_color;
+    color: white;
+}
+
+.other_recepe{
+    h4{
+        @include heading($h4_desk_font_size,$heading_color,28px,$semi_bold,$heading_letter_spacing,left);
+
+    }
+}
+
+.pagination{
+    justify-content: left;
+    margin-bottom: 64px;
+}
+}
+
+
+
+#details_page{
+    min-height: 572px;
+    position: relative;
+}
+
+.info_card{
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 400px;
+    padding: 32px 25px;
+    position: absolute;
+    bottom: -90px;
+    right: 15%;
+    filter: drop-shadow(0px 0px 7px rgba(36, 29, 29, 0.24));
+
+    .props{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
+        cursor: pointer;
+        transition: .5s;
+        padding: 16px 10px;
+
+        .props_name{
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 18px;
+            font-weight: $medium_bold;
+        }
+        .props_unit{
+            color: $primary_color;
+            font-size: 18px;
+            font-weight: $medium_bold;
+        }
+    }
+
+    & .props:hover{
+        background-color: $secondary_color;
+        color: white;
+    }
+
+    h3{
+        @include heading ($h3_desk_font_size,$secondary_color,32px,$semi_bold,$heading_letter_spacing,left);
+ 
+    }
+
+    .social_share{
+        margin-top: 57px;
+        text-align: center;
+
+        p{
+            @include paragraph($p_font_size,$primary_color,140%,$semi_bold,.5,center);
+            margin-bottom: 12px;
+
+        }
+        a{
+            text-decoration: none;
+            margin: 0px 6px;
+        }
+    }
+}
+
+
+
+
+
