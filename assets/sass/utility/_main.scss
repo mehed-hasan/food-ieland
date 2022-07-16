@@ -13,6 +13,28 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     height: $gap;
 }
 
+.gap_32{
+    height: 32px;
+}
+
+.gap_40{
+    height: 40px;
+}
+
+.gap_48{
+    height: 48px;
+}
+.gap_64{
+    height: 64px;
+}
+.gap_68{
+    height: 64px;
+}
+
+.gap{
+    height: 90px;
+}
+
 #navbar{
 
     .navbar{
@@ -1286,7 +1308,483 @@ svg{
     }
 }
 
+#details_content{
+    .details_left_content {
+        h2{
+            @include heading ($h2_desk_font_size,black,39px,$semi_bold,initial,center);
+
+        }
+
+    }
+
+    .cook_details{
+        max-width:446px;
+
+        .details{
+            padding-left: 16px;
+            padding-right: 32px;
+            border-right: 1px solid  rgba(21, 21, 21, 1);
+
+        }
+        .prep_time:last-child .details{
+            border: none;
+        }
+
+        h5{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.1em;
+            color: #151515;
+            opacity: 0.4;
+        }
+
+        p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: -0.02em;
+            color: #151515;
+        }
+
+
+    }
+
+    .food_description{
+        color: rgba(21, 21, 21, 0.6);
+        opacity: 0.6;
+    }
+
+
+    // ingredients started 
+
+    .ingredients{
+        h2{
+            @include heading ($h2_desk_font_size,black,39px,$semi_bold,initial,left);
+
+        }
+        h4{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            /* identical to box height, or 160% */
+
+
+            /* black */
+
+            color: #151515;
+
+        }
+    }
+
+
+    .in_el_wrapper {
+
+        .in_el{
+            border-bottom: 1px solid rgba(21, 21, 21, 0.1);
+            padding: 25px 0px;
+
+            p{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 140%;
+                /* or 22px */
+
+                text-transform: capitalize;
+
+                /* black */
+
+                color: #151515;
+
+            }
+        }
+
+        .in_el:last-child{
+            border: none;
+    
+        }
+    }
+
+    .pessage:last-child{
+        border: none;
+    }
+
+    .pessage{
+        border-bottom: 1px solid rgba(21, 21, 21, 0.1);
+
+        .pessage_heading{
+            @include heading (20px,black,39px,$semi_bold,initial,left);
+
+        }
+
+      
+        .pessage_details{
+
+            p{
+                color: rgba(21, 21, 21, 0.6);
+                margin-bottom: 24px;
+            }
+        }
+
+
+    
+    
+}
+
+
+}
+
+
+
+// details_right_content 
+
+.details_right_content{
+     margin-top: 160px;
+    .big{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: capitalize;
+        color: #FF6F00;
+    }
+    .semi{
+        font-size: 32px;
+        font-weight: 700;
+        color: rgba(21, 21, 21, 0.2);
+    }
+
+    .total_review{
+        .star_fill path{
+            fill: #FF6F00;
+        }
+
+        .star_with_bar{
+            height: 25px;
+            margin-bottom: 2px;
+            .bar{
+                position: relative;
+            border: 1px solid #c4c4c4;
+            border-radius: 10px;
+            height: 12px;
+            flex-grow: 1;
+            overflow: hidden;
+            }
+            .bar_filled{
+                position: absolute;
+                height: 100%;
+                background-color: $secondary_color;
+                border-radius: 10px;
+            }
+            .value{
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                /* identical to box height */
+
+                text-align: right;
+                text-transform: capitalize;
+
+                /* #000000 */
+
+                color: #FF7426;
+            }
+         }
+    }
+
+
+
+.leave_review{
+
+    .input-group-text{
+        background-color: transparent;
+    }
+
+    h4{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+
+        text-transform: capitalize;
+
+        /* black */
+
+        color: #151515;
+        margin-bottom: 24px;
+    }
+    .review_options_wrapper{
+
+       
+
+
+        .review_options{
+            max-width:174px;
+            width: 100%;
+            margin-bottom: 15px;
+            span{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                text-transform: capitalize;
+    
+                /* black */
+    
+                color: #151515;
+    
+                opacity: 0.5;
+    
+            }
+    
+            .clickable_star{
+                cursor: pointer;
+            }
+            
+        }
+    }
+    
+
+    .review_btn button{
+        @include  button (15px 54px,white,#151515,5px,$bold,10px);
+
+    }
+}
+
+// Comments 
+
+.comments{
+
+    .slick-dots{
+        display: flex;
+        margin-left: 5px;
+        padding-left: 0px;
+        margin-top: 10px;
+
+    }
+
+    .slick-dots li{
+        list-style: none;
+    }
+    .slick-dots li button{
+        border: none;
+        color: transparent;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: .5s;
+
+    }
+
+    .slick-dots .slick-active button{
+        width: 30px;
+        background-color: $secondary_color;
+        border-radius: 15px;
+    }
+
+    h4{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+
+        text-transform: capitalize;
+
+        /* black */
+
+        color: #151515;
+        margin-bottom: 24px;
+    }
+
+    .comment_el{
+        background: #FFFFFF;
+        box-shadow: 0px 0px 5px rgba(124, 124, 124, 0.25);
+        border-radius: 5px;
+        padding: 25px;
+
+        .name_date{
+            p{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                margin-top: 8px;
+
+                color: #151515;
+
+                opacity: 0.4;
+            }
+        }
+
+        .commented_text{
+            margin-top: 26px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            /* or 22px */
+
+            text-transform: capitalize;
+
+            /* black */
+
+            color: #151515;
+
+            opacity: 0.8;
+        }
+    }
+}
+
+
+.other_recipe{
+    h2{
+        @include heading ($h2_desk_font_size,black,50.4px,$bold,initial,left);
+        font-size: 32px;
+    }
+}
 
 
 
 
+    
+}
+
+
+#newsletter_2{
+    @include background(442px, center, cover );
+
+    .newsletter2{
+    
+        max-width: 636px;
+        width: 100%;
+    
+    
+        h2{
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 140%;
+            /* or 56px */
+    
+            text-align: center;
+            text-transform: capitalize;
+    
+            color: #FFFFFF;
+        }
+    
+        p{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            /* or 22px */
+    
+            text-align: center;
+            text-transform: capitalize;
+    
+            color: #FFFFFF;
+            margin-top: 24px;
+        }
+    
+        .subscribe{
+            position: relative;
+    
+            ::placeholder{
+                color: #151515;
+                opacity: 0.4;
+            }
+    
+            input{
+                min-height: 55px;
+                border-radius: 10px
+            }
+    
+            button{
+                @include  button (15px,white,black,5px,$bold,15.87px);
+    
+                position: absolute;
+                right: 4px;
+                top: 3px;
+                border-radius: 10px;
+            }
+        }
+    
+    
+    }
+    
+}
+
+
+.food_card_wrapper{
+    .slick-dots{
+        display: flex;
+        margin-left: 5px;
+        padding-left: 0px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .slick-dots li{
+        list-style: none;
+    }
+    .slick-dots li button{
+        border: none;
+        color: transparent;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: .5s;
+
+    }
+
+    .slick-dots .slick-active button{
+        width: 30px;
+        background-color: $secondary_color;
+        border-radius: 15px;
+    }
+
+    .food_card{
+        .food_img{
+            min-height: 200px;
+        }
+        margin: 0px 10px;
+
+    }
+    h3{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        color: #151515;  
+    }
+}
+
+.food_card_2{
+    margin-bottom: 24px;
+
+  .food_details{
+    h4{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #151515;
+
+    }
+    p{
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #151515;
+
+        opacity: 0.6;
+
+    }
+  }
+}
+
+
+// Article details page 
