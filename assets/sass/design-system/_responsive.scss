@@ -104,12 +104,14 @@
 
     #hero .hero_row .hero_right .hero_img2 {
         right: 50px;
-        transform: translate(45%, 61%);
-        height: 200px;
+        transform: translate(-80%, 245px);
+        height: 100px;
+        left: 0px;
     }
     #hero .hero_row .hero_right .hero_img1{
         height: 100px;
-        transform: translate(-32%, -106px);
+        transform: translate(-130%, 117px);
+        left: 20px;
     }
 
 }
@@ -247,12 +249,14 @@
     #hero .hero_row .hero_left a {
         padding: 10px 20px !important;
     }
-    }
-
 
     .food_details{
         padding:  10px !important;
     }
+    }
+
+
+
 
 
     @media screen and (max-width:576px){

@@ -36,6 +36,20 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     height: 90px;
 }
 
+.navbar-toggler svg path{
+    fill: white;
+}
+.dis_rate{
+    font-style: normal;
+font-weight: 700;
+font-size: 56px;
+line-height: 68px;
+/* identical to box height */
+
+
+color: $secondary_color;
+
+}
 #navbar{
 
     .navbar{
@@ -123,7 +137,7 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     
 
     .hero_row{
-        @include background(570px, center, cover );
+        @include background(540px, center, cover );
         align-items: center;
         overflow: hidden;
         .hero_left{
@@ -151,10 +165,11 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
             position: relative;
             .hero_img1{
                 @include background(unset, center, contain );
-                height: 400px;
+                height: 300px;
                 width: 400px;
                 position: absolute;
                 left: 0px;
+                top: -10px
             }
 
 
@@ -475,7 +490,7 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
         }
     
         a{
-            @include button(8px 24px,white,$green_color,9px,$bold,149.2%);
+            @include button(12px 30px,white,$secondary_color,5px,$bold,149.2%);
         }
 
     }
@@ -1084,9 +1099,9 @@ svg{
                             background: transparent;
                             border-radius: 32px;
                             padding:2px 8px;
-                            color:$third_color;
+                            color:#c6c6c6;
                             width: fit-content;
-                            border: 2px solid $third_color;
+                            border: 2px solid #c6c6c6;
                             text-decoration: none;
                             margin-bottom: 10px;
                             }
@@ -1968,4 +1983,33 @@ color: #151515;
         @include  button (15px 54px,white,#151515,5px,$bold,10px);
 
     }
+}
+
+.hero_slider{
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .slick-dots li{
+        list-style: none;
+    }
+    .slick-dots li button{
+        border: none;
+        color: transparent;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: .5s;
+
+    }
+
+    .slick-dots .slick-active button{
+        width: 30px;
+        background-color: white;
+        border-radius: 15px;
+    }
+
 }
