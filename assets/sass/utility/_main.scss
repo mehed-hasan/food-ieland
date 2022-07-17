@@ -71,8 +71,6 @@ color: $secondary_color;
         opacity: 1;
     }
     .social{
-
-        margin-left: 129px;
         align-items: center;
 
         li{
@@ -2026,4 +2024,7 @@ text-transform: capitalize;
 /* #000000 */
 
 color: #FF7426;
+}
+.food_card{
+    cursor: pointer;
 }
