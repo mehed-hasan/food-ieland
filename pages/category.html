@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../assets/plugins/range_slider/range.css" type="text/css">
   <link rel="stylesheet" href="../assets/css/style.min.css" type="text/css">
   
 </head>
@@ -23,7 +24,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0 links">
+          <ul class="navbar-nav mb-2 mb-lg-0 links mx-auto">
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="../index.html">Home</a>
             </li>
@@ -112,7 +113,9 @@
                             <path d="M11.875 6.875H8.125" stroke="#FF7426" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
     
-                            <span><h5>Filter by Price</h5></span>
+                            <div>
+                              <span><h5>Filter by Price</h5></span>
+                            </div>
 
 
                             <div class="recipie_panel">
@@ -124,6 +127,21 @@
                         </div>
                      </div>
 
+                     <div id="range_slider">
+                      <section class="range-slider" id="facet-price-range-slider">
+
+                        <input name="range-1" value="5000" min="0" max="30000" step="1" type="range">
+                        
+                        <input name="range-2" value="25000" min="0" max="30000" step="1" type="range">
+                        
+                      </section>
+                      <div class="max_min_range d-flex justify-content-between align-items-center">
+                        <span>BDT 500</span>
+                        <span>BDT 30,000</span>
+                      </div>
+                    </div>
+
+                    <div class="gap_48"></div>
                      <div class="categories">
                         <h5>Categories</h5>
                         <div class="button_groups">
@@ -744,6 +762,7 @@
 <!-- data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top" -->
   <script src="../assets/js/core/jquery-3.6.0.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="../assets/plugins/range_slider/range.js" type="text/javascript"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
   <script>
      

@@ -12,7 +12,9 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
 .first_content{
     margin-top: 150px;
 }
-
+.form-control:focus{
+    box-shadow: none;
+}
 
 .gap_32{
     height: 32px;
@@ -54,8 +56,7 @@ color: $secondary_color;
 
     .navbar{
         background-color: rgba(37, 37, 37, 0.5) !important;
-        backdrop-filter: blur(4px);
-        min-height: 80px;
+        backdrop-filter: blur(40px);
         position: fixed;
         top: 0;
         width: 100%;
@@ -75,7 +76,7 @@ color: $secondary_color;
         align-items: center;
 
         li{
-            padding-right: 40px;
+            padding-right: 24px;
         }
 
         & li:last-of-type{
@@ -90,7 +91,7 @@ color: $secondary_color;
 
     .links{
         li{
-            padding-right: 62px;
+            padding-right: 40px;
         }
         & li:last-of-type{
             padding-right: 0px;
@@ -686,7 +687,7 @@ color: $secondary_color;
                   }
 
                  & svg:hover  {
-                    background: white;
+                    // background: white;
                     
                   }
 
@@ -695,7 +696,7 @@ color: $secondary_color;
                   }
 
                   & svg:hover path{
-                    fill:rgb(8, 91, 216);
+                    stroke:white;
                   }
                   
         
@@ -2012,4 +2013,17 @@ color: #151515;
         border-radius: 15px;
     }
 
+}
+
+.max_min_range{
+    font-weight: 500;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+text-transform: capitalize;
+
+/* #000000 */
+
+color: #FF7426;
 }
