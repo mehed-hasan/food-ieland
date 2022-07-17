@@ -1227,6 +1227,19 @@
     }
   ]
 });
+
+
+function height(){
+  $height = $(".food_card").height();
+$width =$(".food_card").width();
+$(".food_add_img").css({
+  "height":$height+'px'
+})
+}
+height();
+$(window).resize(function(){
+  height();
+});
   </script>
 </body>
 </html>
