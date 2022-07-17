@@ -9,9 +9,10 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     padding: 0px;
 }
 
-.gap{
-    height: $gap;
+.first_content{
+    margin-top: 150px;
 }
+
 
 .gap_32{
     height: 32px;
@@ -92,6 +93,8 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
 .pagination {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
 
 
     .page-item:first-child .page-link, .page-item:not(:first-child) .page-link {
@@ -102,8 +105,6 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
         line-height: 140%;
         color: $primary_color;
         padding: 8px 16px;
-        margin-left: 5px;
-        margin-right: 5px;
     }
     
     .page-item.active .page-link {
@@ -249,20 +250,23 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
         @include background(266px, center, cover );
         border-radius: 5px;
     }
+    
+    .food_add_img{
+        @include background(400px, center, cover );
+        border-radius: 5px;
+    }
 
     .food_details{
 
-        @include max_width(352px);
-        margin: auto;
-        padding: 25px 0px;
+
+        // @include max_width(352px);
+        padding: 25px ;
         
-        svg{
-            margin-top: 10px
-        }
-        
+
         h3.title{
             @include heading ($h3_desk_font_size,$heading_color,32px,$semi_bold,$heading_letter_spacing,left);
-            
+            font-size: 22px !important;
+            line-height: 26px !important;
         }
 
         .other_info{
@@ -281,14 +285,30 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
                     display: flex;
                 }
                 .uploaded_time span:last-of-type, .food_type span:last-of-type{
-                    margin-top: 12px;
                     margin-left: 14px;
+                    font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 150%;
+                        /* identical to box height, or 21px */
+
+
+                        /* Black 60% */
+
+                        color: rgba(21, 21, 21, 0.6);
                 }
 
         
             }
 
             .food_price{
+                h3{
+                    font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 32px;
+                }
+
                 @include heading ($h3_desk_font_size,$secondary_color,32px,$semi_bold,$heading_letter_spacing,left); 
             }
     
@@ -358,13 +378,8 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     
         .food_details{
     
-            @include max_width(352px);
-            margin: auto;
-            padding: 25px 0px;
+            padding: 25px;
             
-            svg{
-                margin-top: 10px
-            }
             
             h3.title{
                 @include heading ($h3_desk_font_size,$heading_color,32px,$semi_bold,$heading_letter_spacing,left);
@@ -385,9 +400,9 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
         
                     .uploaded_time, .food_type{
                         display: flex;
+                        align-items: center;
                     }
                     .uploaded_time span:last-of-type, .food_type span:last-of-type{
-                        margin-top: 12px;
                         margin-left: 14px;
                     }
     
@@ -470,7 +485,7 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
 
         .news_letter_bg{
             @include background(288px, center, content );
-            width: 394px;
+            // width: 394px;
 
         }
     }
@@ -642,12 +657,14 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
               .social_btns {
                 path {
                     transition: 1s;
+                    stroke: $secondary_color;
                   }
                   a {
                     text-decoration: none;
                   
                   }
                   svg {
+
                     transition: .5s;
                     border-radius: 50%;
                   
@@ -819,7 +836,7 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
 .badge{
 background: $secondary_color;
 border-radius: 79px;
-padding: 10px 15px;
+padding: 5px 10px;
 color: white;
 font-size: 20px;
 display: flex;
@@ -831,6 +848,7 @@ right: 25px;
 
 svg{
     margin-left: 10px;
+    height: 15px;
 }
 }
 
@@ -1032,7 +1050,7 @@ svg{
             .search_box{
                 margin-bottom: 28px;
             }
-            @include max_width(400px);
+            // @include max_width(400px);
             h5{
                 @include heading ($h5_desk_font_size,$primary_color,28px,$semi_bold,$heading_letter_spacing,left); 
 
@@ -1183,12 +1201,31 @@ svg{
     margin-top: 64px;
 
     h3{
-        @include heading ($h3_desk_font_size,$heading_color,32px,$semi_bold,$heading_letter_spacing,left);
+
+        font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-transform: capitalize;
+
+/* black */
+
+color: #151515;
         margin-bottom: 18.5px;
+        // margin-top: 30px;
     }
-    .about_item{
-        margin-left: 40px;
+    @media screen and (min-width:575px){
+        .about_item{
+            margin-left: 10px;
+        }
     }
+    @media screen and (min-width:768px){
+
+        .about_item{
+            margin-left: 20px;
+        }
+    }
+
     .item{
 
         display: flex;
@@ -1199,7 +1236,12 @@ svg{
 }
 
 .date{
-    color: rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(21, 21, 21, 0.6);
+
 }
 .user_info{
     display: flex;
@@ -1207,7 +1249,11 @@ svg{
     margin-bottom: 19px;
 
     p{
-        @include paragraph($p_font_size,$primary_color,140%,$bold,1,left);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #151515;
         margin-left: 16px;
         margin-right: 44px;
     }
@@ -1215,7 +1261,13 @@ svg{
 .blog_short_desc{
     @include max_width(510px);
     margin-bottom: 20px;
-    @include paragraph($p_font_size,$primary_color,28px,$regular_bold,.5,left);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(21, 21, 21, 0.6);
+
+
 
 }
 .see_more{
@@ -1247,8 +1299,10 @@ svg{
 
 
 #details_page{
-    min-height: 572px;
+    min-height: 50vh;
     position: relative;
+    background-position: center;
+    background-origin: content-box;
 }
 
 .info_card{
@@ -1257,8 +1311,8 @@ svg{
     width: 400px;
     padding: 32px 25px;
     position: absolute;
-    bottom: -90px;
-    right: 15%;
+    top: -400px;
+    left: 0px;
     filter: drop-shadow(0px 0px 7px rgba(36, 29, 29, 0.24));
 
     .props{
@@ -1311,7 +1365,7 @@ svg{
 #details_content{
     .details_left_content {
         h2{
-            @include heading ($h2_desk_font_size,black,39px,$semi_bold,initial,center);
+            @include heading (32px,black,39px,$semi_bold,initial,center);
 
         }
 
@@ -1441,6 +1495,7 @@ svg{
 // details_right_content 
 
 .details_right_content{
+    position: relative;
      margin-top: 160px;
     .big{
         font-style: normal;
@@ -1459,6 +1514,9 @@ svg{
     .total_review{
         .star_fill path{
             fill: #FF6F00;
+        }
+        .stars_wrapper{
+            margin-top: 15px;
         }
 
         .star_with_bar{
@@ -1497,6 +1555,10 @@ svg{
 
 
 .leave_review{
+
+    .review_options_wrapper{
+        margin-bottom: 30px;
+    }
 
     .input-group-text{
         background-color: transparent;
@@ -1766,7 +1828,17 @@ svg{
     margin-bottom: 24px;
 
   .food_details{
+
+
+
     h4{
+
+        
+        a{
+            text-decoration: none !important;
+            color: #151515 !important;
+
+        }
         font-weight: 600;
         font-size: 18px;
         line-height: 28px;
@@ -1779,12 +1851,121 @@ svg{
         font-size: 14px;
         line-height: 150%;
         color: #151515;
-
         opacity: 0.6;
 
     }
   }
 }
 
+.article_details .pessage{
+    border: none !important;
+}
+
+.article_list{
+    h2{
+        @include heading ($h2_desk_font_size,black,50.4px,$bold,initial,center);
+        
+    }
+    .about_item{
+        margin-left: 0px !important;
+    }
+}
+
+.bold_passage{
+    background: #F9F9F9;
+    border-top: 1px solid #151515;
+    border-bottom: 1px solid #151515;
+    padding: 35px 0px;
+    p{
+        font-family: 'Inter';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 64px;
+        color: #151515;
+           
+    }
+}
 
 // Article details page 
+
+#share{
+    max-width: 196px;
+    width: 100%;
+    h3{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;        
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #151515; 
+    }
+
+    .sharing_platforms{
+        a{
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.article_page_heading{
+    h2{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        color: #151515;
+    }
+    text-align: center;
+    max-width: 1076px;
+    margin: auto;
+}
+
+.poster_info{
+    h4{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        
+        color: #151515;
+             
+    }
+
+    .user_img{
+        border-right: 1px solid black;
+        padding-right: 20px;
+    }
+}
+.posted_date{
+    padding-left: 20px;
+}
+
+#contact_form{
+    h2{
+        text-align: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        color: #151515;
+    }
+    label{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #151515; 
+        margin-bottom: 8px;
+    }
+    .form_group{
+        margin-bottom: 20px;
+    }
+
+    .review_btn button{
+        @include  button (15px 54px,white,#151515,5px,$bold,10px);
+
+    }
+}

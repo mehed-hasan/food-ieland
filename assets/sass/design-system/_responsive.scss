@@ -1,14 +1,310 @@
+@media screen and (max-width:1200px){
+
+    h1{
+        font-size: 32px !important;
+    }
+    h2{
+        font-size: 24px !important;
+    }
+    #food_cards{
+        h3{
+            font-size: 15px !important;
+            line-height: 25px !important;
+        }
+        .food_card{
+             .other_info{
+                flex-direction: column;
+                align-items: start !important;
+             }
+        }
+        .food_price{
+            margin-top: 15px;
+        }
+            .time_and_type{
+                max-width: unset !important;
+            }
+
+    }
+}
+
 
 @media screen and (max-width:992px){
 
+    .gap_32{
+        height: 16px;
     }
+    
+    .gap_40{
+        height: 20px;
+    }
+    
+    .gap_48{
+        height: 24px;
+    }
+    .gap_64{
+        height: 32px;
+    }
+    .gap_68{
+        height: 34px;
+    }
+    
+    .gap{
+        height: 45px;
+    }
+
+
+    .first_content{
+        margin-top: 90px;
+    }
+
+    #menu_items{
+        .item{
+            gap: 10px !important;
+        }
+        .tab_btns{
+            .nav{
+                gap: 15px !important;
+                justify-content: center !important;
+
+                .nav-item{
+                    margin: 0px 10px;
+                    .nav-link{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    #social_section h1 {
+        font-size: 24px;
+        line-height: 38px;
+        p{
+            font-size: 14px;
+        }
+    }    
+
+  
+    #share{
+        margin: auto;
+        .sharing_platforms{
+            flex-direction: row !important;
+            gap: 30px;
+            margin-left: -31px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+    }
+
+    .details_right_content {
+        margin-top: 0px;
+    }
+
+
+    #hero .hero_row .hero_right .hero_img2 {
+        right: 50px;
+        transform: translate(45%, 61%);
+        height: 200px;
+    }
+    #hero .hero_row .hero_right .hero_img1{
+        height: 100px;
+        transform: translate(-32%, -106px);
+    }
+
+}
     @media screen and (max-width:768px){
-        //Tabs
+
+        h1{
+            font-size: 28px !important;
+        }
+        h2{
+            font-size: 18px !important;
+        }
+         p{
+            font-size: 14px;
+        }
+        #details_content .pessage .pessage_heading{
+            font-size: 16px !important;
+        }
+        .other_info {
+            margin-top: 10px !important;
+        }
+        .food_description{
+            font-size: 16px;
+        }
+        .info_card h3{
+            font-size: 18px;
+        }
+        .props_name, .props_unit{
+            font-size: 16px !important;
+        }
+        .in_el svg{
+            width: 15px;
+        }
+        #details_content .in_el_wrapper .in_el {
+            padding: 5px 0px;
+            border: none;
+            gap: 8px !important;
+
+            p{
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                /* identical to box height, or 21px */
+
+
+                /* Black 60% */
+
+                color: rgba(21, 21, 21, 0.6);
+
+            }
+        }
+
+        .hero_row{
+            max-width: 500px;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+
+            .hero_left{
+                h2{
+                    text-align: center !important;
+                    font-size: 26px !important;
+                    line-height: 38.4px !important;
+                }
+                p{
+                    text-align: center !important;
+                }
+            }
+        }
+
+        #blog_list h3{
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        #blog_list .see_more{
+            padding: 2px 5px;
+        }
+        #blog_list .user_info p{
+            margin-right: 0px;
+        }
+
+        .cat_card{
+            margin-bottom: 24px;
+        }
+        .uploaded_time span:last-of-type, .food_type span:last-of-type{
+            margin-left: 5px !important;
+            font-size: 10px;
+        }
+
+
+        #newsletter {
+            .newsletter_left {
+                text-align: center !important;
+                p,h2{
+                text-align: center;
+                }
+            }
+        }
+
+        .about_item {
+            h5{
+                font-size: 14px !important;
+            }
+            p{
+                font-size: 12px !important;
+                margin-top: 1px !important;
+            }
+            
+        }
+        .item_price{
+            font-size: 14px !important;
+        }
+
+        #social_section .instagram_btn {
+            padding: 12px 26px !important;
+            font-size: 14px !important;
+
     
     }
-    @media screen and (max-width:576px){
-     
+
+    .bold_passage p {
+        font-size: 16px;
+        line-height: 26px;
+
     }
+
+
+    #navbar .social {
+        display: flex;
+        flex-direction: revert;
+        align-items: center;
+        margin-left: 0px;
+    }
+
+
+    #hero .hero_row .hero_left a {
+        padding: 10px 20px !important;
+    }
+    }
+
+
+    .food_details{
+        padding:  10px !important;
+    }
+
+
+    @media screen and (max-width:576px){
+
+        #food_cards .food_card .food_img{
+            min-height: 140px;
+        }
+        .food_card .food_add_img{
+            min-height: 319px;
+        }
+        .time_and_type {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        #blog_list h3{
+            margin-top: 15px;
+        }
+        #blog_list .user_info p{
+            margin-right: 44px;
+        }
+
+        .food_card_2 .food_details h4 {
+            font-size: 14px;
+        }
+
+        .food_card_2 .food_details p {
+            margin-top: 0px;
+            font-size: 12px;
+    }
+    .food_card_2 .food_details p {
+        line-height: 25px;
+    }
+
+    .badge{
+        padding: 5px;
+        font-size: 14px;
+        svg{
+            height: 10px;
+        }
+    }
+
+}
+    @media screen and (max-width:480px){
+        #details_content .cook_details .details{
+            padding-right: 10px;
+            padding-left: 5px;
+        }
+    }
+
+
+
     
     @media screen and (max-width:375px){
        
