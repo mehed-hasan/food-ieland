@@ -47,7 +47,8 @@ a{
 }
 .dis_rate{
     font-style: normal;
-font-weight: 700;
+font-weight: 
+700;
 font-size: 56px;
 line-height: 68px;
 /* identical to box height */
@@ -66,7 +67,7 @@ color: $secondary_color;
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 999;
 
     }
 
@@ -920,10 +921,11 @@ svg{
 }
 
 .filter_btn.active{
-    background: $secondary_color;
+    
+    background: $secondary_color !important;
     border-radius: 32px;
     padding:2px 8px;
-    color: white;
+    color: white !important;
     width: fit-content;
     border: 2px solid transparent;
 
@@ -1156,6 +1158,7 @@ svg{
                             border: 2px solid #c6c6c6;
                             text-decoration: none;
                             margin-bottom: 10px;
+                            transition: .5s;
                             }
                     }
                     
