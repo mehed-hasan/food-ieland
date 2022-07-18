@@ -8,6 +8,9 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     margin: 0px;
     padding: 0px;
 }
+a{
+    text-decoration: none;
+}
 
 .first_content{
     margin-top: 150px;
@@ -38,6 +41,7 @@ h1,h2,h3,h4,h5,h5,h6,p,a{
     height: 90px;
 }
 
+
 .navbar-toggler svg path{
     fill: white;
 }
@@ -54,6 +58,8 @@ color: $secondary_color;
 }
 #navbar{
 
+
+
     .navbar{
         background-color: rgba(37, 37, 37, 0.5) !important;
         backdrop-filter: blur(40px);
@@ -61,10 +67,58 @@ color: $secondary_color;
         top: 0;
         width: 100%;
         z-index: 1;
+
     }
 
-    li a{
+    .dropdown-menu{
+        top: 54px;
+        border: none;
+        box-shadow: 0px 2px 12px gray ;
+        
+    }
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: $secondary_color;
+    }
+    .arrow{
+        position: absolute;
+        height: 15px;
+        width: 15px;
+        transform: rotate(45deg);
+        background: white;
+        top: -5px;
+        right: 130px;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+
+    ul  li  a{
         @include color(white,0.5);
+        padding-right: 25px;
+    }
+    .dropdown-menu li svg{
+        margin-right: 15px;
+    }
+    .dropdown-menu li {
+        padding: 0px;
+    }
+    .dropdown-menu li a{
+        color: black;
+        opacity: 1;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: capitalize;
+
+        /* black */
+
+        color: #151515;
+
+        opacity: 0.6;
+
     }
 
     li a.active{
@@ -88,9 +142,7 @@ color: $secondary_color;
     }
 
     .links{
-        li{
-            padding-right: 40px;
-        }
+  
         & li:last-of-type{
             padding-right: 0px;
         }
@@ -360,6 +412,7 @@ color: $secondary_color;
         border-radius: 5px;
         position: relative;
         margin-bottom: 40px;
+        text-decoration: none;
 
         .heart{
             position: absolute;
@@ -1324,10 +1377,9 @@ color: #151515;
     border-radius: 10px;
     width: 400px;
     padding: 32px 25px;
-    position: absolute;
-    top: -400px;
     left: 0px;
     filter: drop-shadow(0px 0px 7px rgba(36, 29, 29, 0.24));
+    margin-top: -260px;
 
     .props{
         display: flex;
@@ -1510,7 +1562,7 @@ color: #151515;
 
 .details_right_content{
     position: relative;
-     margin-top: 160px;
+     margin-top: 100px;
     .big{
         font-style: normal;
         font-weight: 700;
